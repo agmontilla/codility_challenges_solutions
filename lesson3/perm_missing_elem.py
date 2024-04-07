@@ -1,18 +1,7 @@
-from typing import List
-
-
-def solution(A: List) -> int:
-    maximum_element = len(A) + 1
+async def solution(numbers: list[int]) -> int:
+    """Returns the missing element in the list"""
+    maximum_element = len(numbers) + 1
 
     gauss_sum = int(maximum_element * (maximum_element + 1) / 2)
 
-    return gauss_sum - sum(A)
-
-
-def main():
-    sample = [5]
-    print(solution(sample))
-
-
-if __name__ == "__main__":
-    main()
+    return gauss_sum - sum(numbers)
