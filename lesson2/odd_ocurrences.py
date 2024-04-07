@@ -1,9 +1,8 @@
 from collections import Counter
-from typing import List
 
 
-def solution(sample: List) -> int:
-
+async def solution(sample: list) -> int:
+    """Returns the unpaired element in the list"""
     stats = Counter(sample)
 
     unpaired_element = 0
@@ -14,12 +13,3 @@ def solution(sample: List) -> int:
             break
 
     return unpaired_element
-
-
-def main():
-    sample = [9, 3, 9, 3, 9, 7, 9]
-    print(solution(sample))
-
-
-if __name__ == "__main__":
-    main()
