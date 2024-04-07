@@ -1,13 +1,6 @@
 from math import ceil
 
 
-def solution(X: int, Y: int, D: int) -> int:
-    return ceil((Y - X) / D)
-
-
-def main():
-    print(solution(10, 85, 30))
-
-
-if __name__ == "__main__":
-    main()
+async def solution(x: int, y: int, d: int) -> int:
+    """Returns the minimal number of jumps from position x to y"""
+    return ceil((y - x) / d)
