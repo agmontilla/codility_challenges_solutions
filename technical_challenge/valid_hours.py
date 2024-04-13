@@ -3,6 +3,7 @@ from itertools import permutations
 
 
 async def solution(a: int, b: int, c: int, d: int):
+    """Return all the possible valid times from the given numbers"""
     possible_times = set(permutations((a, b, c, d)))
     valid_time = []
 
@@ -18,8 +19,3 @@ async def solution(a: int, b: int, c: int, d: int):
 
     valid_time.sort()
     return valid_time
-
-
-def main():
-    a, b, c, d = (1, 2, 3, 4)
-    print(solution(a, b, c, d))
