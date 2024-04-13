@@ -12,6 +12,6 @@ from lesson4.perm_check import solution
     ],
 )
 @pytest.mark.asyncio
-async def test_perm_check(data_input: list[int], expected: int):
+async def test_perm_check(data_input: list[int], expected: int) -> None:
     """Should return 1 if the array is a permutation and 0 if it is not."""
     assert await solution(data_input) == expected

@@ -16,6 +16,6 @@ from lesson1.binary_gap import solution
     ],
 )
 @pytest.mark.asyncio
-async def test_solution(number: int, expected: int):
+async def test_solution(number: int, expected: int) -> None:
     """Test binary gap solution"""
     assert await solution(number) == expected

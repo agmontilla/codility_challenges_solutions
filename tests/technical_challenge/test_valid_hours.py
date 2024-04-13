@@ -34,7 +34,7 @@ from technical_challenge.valid_hours import solution
     ],
 )
 @pytest.mark.asyncio
-async def test_valid_hours_is_working(input_values: tuple[int, int, int, int], expected: list[time]):
+async def test_valid_hours_is_working(input_values: tuple[int, int, int, int], expected: list[time]) -> None:
     """Should return all the possible valid times"""
     response = await solution(*input_values)
     assert response == expected

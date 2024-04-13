@@ -11,6 +11,6 @@ from lesson3.tape_equilibrium import solution
     ],
 )
 @pytest.mark.asyncio
-async def test_solution(numbers: list[int], expected: int):
+async def test_solution(numbers: list[int], expected: int) -> None:
     """Test tape equilibrium solution"""
     assert await solution(numbers) == expected

@@ -12,6 +12,6 @@ from lesson4.frog_river_one import solution
     ],
 )
 @pytest.mark.asyncio
-async def test_case_frog_river_one_is_working(data_input: list[int], x: int, expected: int):
+async def test_case_frog_river_one_is_working(data_input: list[int], x: int, expected: int) -> None:
     """Should return the earliest time when the frog can jump to the other side of the river."""
     assert await solution(x, data_input) == expected

@@ -14,6 +14,6 @@ async def test_max_counters_is_working(
     counters_dim: int,
     operations: list[int],
     expected: list[int],
-):
+) -> None:
     """Should return the final state of the counters after applying the operations"""
     assert await solution(counters_dim, operations) == expected
