@@ -1,16 +1,4 @@
-from typing import List
-
-
-class PermCheck:
-    def solution(self, A: List) -> int:
-        N = max(A)
-        return (
-            1 if len(A) == len(set(A)) and sum(set(A)) - (N * (N + 1) // 2) == 0 else 0
-        )
-
-
-if __name__ == "__main__":
-    # sample = [4, 1, 3, 2]
-    # sample = [4, 1, 3]
-    sample = [1, 1]
-    print(PermCheck().solution(sample))
+async def solution(arr: list) -> int:
+    """Returns 1 if the array is a permutation and 0 if it is not."""
+    max_value = max(arr)
+    return 1 if len(arr) == len(set(arr)) and sum(set(arr)) - (max_value * (max_value + 1) // 2) == 0 else 0
